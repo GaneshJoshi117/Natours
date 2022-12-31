@@ -9,9 +9,9 @@ export const bookTour = async (tourId) => {
     //   console.log(tourId);
     const session = await axios({
       method: 'GET',
-      url: `https://natours-ganesh.onrender.com//api/v1/bookings/checkout-session/${tourId}`,
+      url: `/api/v1/bookings/checkout-session/${tourId}`,
     });
-    // console.log(session);
+    console.log(session);
     /////////////////////////////////////////////////
     //checkout form
     await stripe.redirectToCheckout({
