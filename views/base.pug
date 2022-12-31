@@ -1,0 +1,30 @@
+doctype html
+html 
+    head 
+        block head
+            meta(charset = 'UTF-8')
+            meta(name = 'viewport', content = 'width=device-width, initial-scale=1')
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+            title Natours | #{title}
+        
+
+    body
+        include _header
+        //Content
+        block content 
+            h1 this is a placeholder
+
+
+        //Footer
+        include _footer
+
+        script(src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin="")
+        //- script(src="/js/leaflet.js")
+        //- script(src="/js/login.js" defer) 
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js' defer)   
+        script(src="/js/bundle.js" defer) 
+        script(src='https://js.stripe.com/v3/')
