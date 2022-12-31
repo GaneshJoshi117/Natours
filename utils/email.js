@@ -36,11 +36,6 @@ module.exports = class Email {
           pass: process.env.SMTP_PASSWORD,
         },
       });
-      // return nodemailer.createTransport(
-      //   nodemailerSendgrid({
-      //     apiKey: process.env.SENDGRID_PASSWORD,
-      //   })
-      // );
     }
   }
   async send(template, subject) {
