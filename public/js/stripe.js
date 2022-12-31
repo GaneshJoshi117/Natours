@@ -9,7 +9,7 @@ export const bookTour = async (tourId) => {
     //   console.log(tourId);
     const session = await axios({
       method: 'GET',
-      url: `https://natours-ganesh.onrender.com/bookings/checkout-session/${tourId}`,
+      url: `https://natours-ganesh.onrender.com//api/v1/bookings/checkout-session/${tourId}`,
     });
     // console.log(session);
     /////////////////////////////////////////////////
