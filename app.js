@@ -30,6 +30,8 @@ app.set('views', path.join(__dirname, 'views'));
 //1) Global middlewares
 //implement cors
 app.use(cors());
+
+app.options('*', cors());
 //serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
