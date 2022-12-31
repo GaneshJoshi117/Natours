@@ -3,7 +3,7 @@ import { showAlert } from './alert';
 
 export const bookTour = async (tourId) => {
   try {
-    const stripe = Stripe(process.env.STRIPE_SECRET_KEY_P);
+    const stripe = Stripe(process.env.STRIPE_SECRET_KEY_P.toString());
     //   console.log(tourId);
     const session = await axios({
       method: 'GET',
