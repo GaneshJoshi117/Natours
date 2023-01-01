@@ -78,7 +78,7 @@ if (alertMessage) showAlert('success', alertMessage, 15);
 if (signBtn) {
   signBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const userName = document.getElementById('uname');
+    const userName = document.getElementById('uname').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const passwordConfirm = document.getElementById('passwordConfirm').value;
