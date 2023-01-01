@@ -47,7 +47,7 @@ export const signupUser = async (
       method: 'POST',
       url: 'api/v1/users/signup',
       data: {
-        userName,
+        name: userName,
         email,
         password,
         passwordConfirm,
