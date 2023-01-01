@@ -60,6 +60,6 @@ export const signupUser = async (
       }, 1000);
     }
   } catch (e) {
-    showAlert('error', error.response.data.message);
+    showAlert('error', e.response.data.message);
   }
 };
