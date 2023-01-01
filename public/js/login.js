@@ -36,18 +36,13 @@ export const logout = async () => {
   }
 };
 
-export const signupUser = async (
-  userName,
-  email,
-  password,
-  passwordConfirm
-) => {
+export const signupUser = async (name, email, password, passwordConfirm) => {
   try {
     const res = await axios({
       method: 'POST',
       url: 'api/v1/users/signup',
       data: {
-        name: userName,
+        name,
         email,
         password,
         passwordConfirm,
