@@ -81,7 +81,7 @@ exports.logout = (req, res) => {
     expires: new Date(Date.now() + 600),
     httpOnly: true,
   });
-  location.assign('/');
+
   res.status(200).json({
     status: 'success',
   });
