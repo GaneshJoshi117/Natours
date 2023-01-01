@@ -1,5 +1,5 @@
 import '@babel/polyfill';
-import { login, logout } from './login';
+import { login, logout, signupUser } from './login';
 import { displayMap } from './leaflet';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
@@ -12,6 +12,7 @@ const logoutBtn = document.querySelector('.nav__el--logout');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-settings');
 const bookBtn = document.getElementById('book-tour');
+const signBtn = document.getElementById('signUp');
 
 //Delegation
 if (mapBox) {
@@ -73,3 +74,14 @@ if (bookBtn) {
 
 const alertMessage = document.querySelector('body').dataset.alert;
 if (alertMessage) showAlert('success', alertMessage, 15);
+
+if (signBtn) {
+  signBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const userName = document.getElementById('uname');
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const passwordConfirm = document.getElementById('passwordConfirm').value;
+    signupUser(userName, email, password, passwordConfirm);
+  });
+}

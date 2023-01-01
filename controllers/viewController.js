@@ -86,3 +86,15 @@ exports.alerts = (req, res, next) => {
   }
   next();
 };
+
+exports.signup = (req, res, next) => {
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('signup', {
+      title: 'Log into your account',
+    });
+};
