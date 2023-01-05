@@ -151,6 +151,7 @@ tourSchema.pre(/^find/, function (next) {
   });
   next();
 });
+
 //EMBEDDING
 // tourSchema.pre('save', async function (next) {
 //   const guidesPromises = this.guides.map(async (id) => await User.findById(id));
