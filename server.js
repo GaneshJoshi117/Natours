@@ -19,7 +19,7 @@ mongoose
     useFindAndModify: false,
   })
   .then((con) => {
-    console.log('connection successfully established');
+    console.log('connection successfully established', con);
   });
 
 //////////////////////////////////////////////
@@ -38,7 +38,6 @@ mongoose
 //   .catch((err) => console.log('Error', err));
 //test code end
 ////////////////////////////////////////////////////////////
-// console.log(process.env);
 app.listen(process.env.PORT, () => {
   console.log('app listening on 3000');
 });
